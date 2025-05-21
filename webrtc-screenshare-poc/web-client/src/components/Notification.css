@@ -1,0 +1,55 @@
+.notification-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.notification-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.notification-card h2 {
+  margin-bottom: 10px;
+}
+
+.notification-card p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-accept {
+  flex: 1;
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-accept:hover {
+  background-color: #43a047;
+}
+
+.btn-reject {
+  flex: 1;
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-reject:hover {
+  background-color: #d32f2f;
+}
