@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".ScreenShareActivity">
+
+    <TextView
+        android:id="@+id/tvScreenShareTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Screen Sharing Active"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/tvRoomIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room ID:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvScreenShareTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/tvRoomId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/tvRoomIdLabel"
+        app:layout_constraintStart_toEndOf="@id/tvRoomIdLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        tools:text="abc123" />
+
+    <Button
+        android:id="@+id/btnCopyRoomId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copy Room ID"
+        app:layout_constraintTop_toBottomOf="@id/tvRoomIdLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnShareRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share Room"
+        app:layout_constraintTop_toTopOf="@id/btnCopyRoomId"
+        app:layout_constraintStart_toEndOf="@id/btnCopyRoomId"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sharing your screen and audio..."
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/btnCopyRoomId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnEndCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Sharing"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
